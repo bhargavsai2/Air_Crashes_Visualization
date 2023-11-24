@@ -1,0 +1,180 @@
+Year,Quarter,Month,Day,Country/Region,Aircraft Manufacturer,Aircraft,Location,Operator,Sum_of_Ground,Sum_of_Fatalities_air,Sum_of_Aboard
+2012,Qtr 1,January,30,Congo,Antonov,Antonov AN 289Q,Namoya Congo,Aviation Congo TRACEP,0,3,5
+2012,Qtr 1,March,15,Puerto,Convair,Convair CV 340N153JR,Near San Juan Puerto,Express One RicoJet,0,2,2
+2012,Qtr 1,March,16,Afghanistan,Sikorsky,Sikorsky S 70A,Kabul Afghanistan,(NATO) Army Turkish - Military,4,12,12
+2012,Qtr 2,April,2,Russia,ATR,ATR 72 201VP,Tyumen Russia,UTAir,0,33,43
+2012,Qtr 2,April,20,Pakistan,Boeing,Boeing 737 236AP,Islamabad Pakistan,Airlines Bhoja,0,127,127
+2012,Qtr 2,April,30,Colombia,Bell 212FAC,Bell 212FAC 4020,Sabanagrande Colombia,Colombiana Aerea -Fuerza Military,0,13,13
+2012,Qtr 2,May,9,Indonesia,Sukhoi Superjet,Sukhoi Superjet 100 95RA,Near Cidahu Indonesia,Sukhoi,0,45,45
+2012,Qtr 2,May,14,Nepal,Dornier,Dornier 228 2129N,Jomsom Nepal,Air Agni,0,15,21
+2012,Qtr 2,June,2,Ghana,Boeing,Boeing B 727,Accra Ghana,Air Allied,12,0,4
+2012,Qtr 2,June,3,Nigeria,McDonnell Douglas,McDonnell Douglas MD 835N,Lagos Nigeria,Air Dana,10,153,153
+2012,Qtr 2,June,6,Mount,Sikorsly,Sikorsly S 58ETOB,Hualla Hualla Mount,Peru Heli          Mamarosa Cusco,0,14,14
+2012,Qtr 2,June,11,Russia,Antonov,Antonov An 2RRA,Near Serov Russia,flight Illegal,0,13,13
+2012,Qtr 2,June,21,Indonesia,Fokker,Fokker F 27 Friendship 400MA,Jakarta Indonesia,Force Air Indonesian - Military,4,7,7
+2012,Qtr 3,August,18,Philippines,PA,PA  34,Off Masbate Island Philippines,Inc. Fly'n Aviatour's,0,3,4
+2012,Qtr 3,August,19,Sudan,Antonov,Antonov An 26,Talodi Sudan,Airlines Alfa,0,32,32
+2012,Qtr 3,September,12,Russia,Antonov,Antonov AN 28RA,Near Palana Russia,Enteprise Air Petropavlovsk-Kamchatsky,0,10,14
+2012,Qtr 3,September,28,Nepal,Dornier,Dornier 228 2029N,Kathmandu Nepal,Air Sita,0,19,19
+2012,Qtr 4,October,7,Sudan,Antonov,Antonov An 12BPST,Near Omdurman Sudan,Force Air Sudanese - Military,0,15,22
+2012,Qtr 4,November,21,Yemen,Antonov,Antonov An 26420,San'a Yemen,Force Air Yemen - Military,0,10,10
+2012,Qtr 4,November,30,Congo,Ilysushin,Ilysushin Il 76TEK,Near Brazzaville Congo,Service Aero,25,7,7
+2012,Qtr 4,December,5,South,Douglas,Douglas C47 TP6840,Near Ladysmith South,Force Air African South - AfricaMilitary,0,11,11
+2012,Qtr 4,December,9,Mexico,Learjet,Learjet 25N345MC,Near Iturbide Mexico,LLC Management Starwood,0,7,7
+2012,Qtr 4,December,25,Kazakhstan,Antonov,Antonov AN 72,Near Shymkent Kazakhstan,Guards Border Kazakhstan - Military,0,27,27
+2012,Qtr 4,December,25,Myanmar,Fokker,Fokker 100XY AGC,Heho Myanmar,Bagan Air,1,1,71
+2012,Qtr 4,December,29,Russia,Tupolev,Tupolev TU 204,Moscow Russia,Airlines Wings Red,0,5,8
+2013,Qtr 1,January,2,Iowa,Bell,Bell 407N445MT,Near Clear Lake Iowa,Corporaion Med-Trans,0,3,3
+2013,Qtr 1,January,4,Venezuela,Britten Norman,Britten Norman BN 2A,Off Los Roques Venezuela,5074 Transaereo,0,6,6
+2013,Qtr 1,January,29,Kazakhstan,Canadair,Canadair CRJ 200ERUP,Near Kyzyltu Kazakhstan,Air SCAT,0,21,21
+2013,Qtr 1,February,13,Ukraine,Antonov,Antonov AN 24RVUR,Donetsk Ukraine,Airlines South,0,5,45
+2013,Qtr 1,March,4,Congo,Fokker,Fokker 509Q CBD,Goma Congo,(CAA) Aviation d' Africaine Compagnie,0,7,10
+2013,Qtr 1,March,8,Alaska,Beechcraft,Beechcraft 1900CN116AX,Near Dillingham Alaska,Cargo Air Ace,0,2,2
+2013,Qtr 2,April,13,Indonesia,Boeing,Boeing B 737,Denpasar Indonesia,Air Lion,0,0,108
+2013,Qtr 2,April,29,Afghanistan,Boeing,Boeing B 747,Bagram Air Base Afghanistan,Cargo Air National,0,7,7
+2013,Qtr 2,May,31,Ontario,Sikorsky,Sikorsky S 76,Moosonee Ontario,Ambulance Air Ornge,0,4,4
+2013,Qtr 2,June,25,near,MI 172 V5,MI 172 V5 helicopter,Gaurikund near,Uttarakhand State          Kedarnath,0,20,20
+2013,Qtr 3,July,6,California,Boeing,Boeing B 777,San Francisco California,Airlines Asiana,0,3,307
+2013,Qtr 3,July,7,Alaksa,de Havilland Canada,de Havilland Canada DHC 3TN93PC,Soldotna Alaksa,Air Rediske,0,10,10
+2013,Qtr 3,August,9,Somalia,Antonov,Antonov AN 12,Mogadishu Somalia,Force Air Ethiopian - Military,0,4,6
+2013,Qtr 3,August,14,Alabama,Airbus,Airbus A300F 622RN155UP,Birmingham Alabama,Service Parcel United,0,2,2
+2013,Qtr 4,October,3,Nigeria,Embraer 120RT,Embraer 120RT Brasilia5N BJY,Lagos Nigeria,Aviation Associated,0,16,20
+2013,Qtr 4,October,10,Malaysia,de Havilland Canada,de Havilland Canada DHC 6 Twin Otter 3109M,Kudat Malaysia,MASwings,0,2,16
+2013,Qtr 4,October,16,Laos,ATR,ATR  72,Near Pakse Laos,Airlines Lao,0,49,49
+2013,Qtr 4,November,3,Bolivia,Swearingen,Swearingen SA227 AC Metro IIICP,Riberalta Bolivia,Aerocon,0,8,18
+2013,Qtr 4,November,9,Malinau,Mil,Mil   Mi,Pujungan Malinau,Borneo          district Military - Indonesian Army,0,13,21
+2013,Qtr 4,November,10,Ontario,Swearingen,Swearingen SA227 AC Metro IIC,Red Lake Ontario,Canada Bearskin Airlines,0,5,7
+2013,Qtr 4,November,17,Russia,Boeing,Boeing 737 53AVQ,Near Kazan Russia,Airlilnes Tararstan,0,50,50
+2013,Qtr 4,November,29,Nambia,Embraer,Embraer ERJ 190ARC9,Bwabwata National Park Nambia,Airline Mozambique,0,33,33
+2013,Qtr 4,December,5,Brazil,Britten Norman,Britten Norman BN 2A,Near Cachimbo Brazil,Aero Taxi Heringer,0,5,5
+2013,Qtr 4,December,26,Russia,Antonov,Antonov 1212162,Irkutsk Russia,Ir,0,9,9
+2014,Qtr 1,February,11,Algeria,Lockheed,Lockheed C 130H,Near Ain Kercha Algeria,Force Air Algerian - Military,0,76,77
+2014,Qtr 1,February,16,Nepal,de Havilland Canada,de Havilland Canada DHC 6 Twin Otter 3009N,Sandhikhark Nepal,Airlines Nepal,0,18,18
+2014,Qtr 1,February,21,Tunisia,Antonov,Antonov 265A DOW,Grombalia Tunisia,Cargo Air Libyan,0,11,11
+2014,Qtr 1,March,18,Washington,Urocopter AS350,Urocopter AS350 B2N250FB,Seattle Washington,TV KOMO / Inc Helicopters,0,2,2
+2014,Qtr 2,April,19,Mexico,British Aerospace BAe,British Aerospace BAe 125 700A HawkerXA,Ramos Arizpe Mexico,Comerciales Aereas Lineas,0,8,8
+2014,Qtr 2,April,20,Finland,Aerocomp Comp Air,Aerocomp Comp Air 8OH XDZ,Jamijarvi Finland,Urheiluilmailijat Suomen,0,8,8
+2014,Qtr 2,May,8,Colombia,Douglas,Douglas DC 3CHK,Near San Vicente del Caguan Colombia,Colombia Alisansa,0,6,6
+2014,Qtr 2,May,17,Laos,Antonov,Antonov 74TK 300RDPL,Xiang Khouang province Laos,Force Air Laos,0,16,17
+2014,Qtr 2,June,14,Ukraine,Ilyushin,Ilyushin 76MD76777,Lugansk Ukraine,Force Air Ukraine - Military,0,49,49
+2014,Qtr 3,July,2,Kenya,Fokker,Fokker 505Y CET,Near Nairobi Kenya,Aviation International Skyward,0,4,4
+2014,Qtr 3,July,7,Vietnam,Mil,Mil Mi 171,Thach That district Vietnam,Force Air Army People's Vietnam - Military,0,18,19
+2014,Qtr 3,July,17,Ukraine,Boeing,Boeing 777 2H6ER9M,Hrabove Ukraine,Airlines Malaysia,0,298,298
+2014,Qtr 3,July,23,Taiwan,ATR,ATR 72 500B,Magong Taiwan,Airways Trans,0,48,58
+2014,Qtr 3,July,24,Mali,Mc Donnell Douglas,Mc Donnell Douglas MD 83EC,Aguelhok Mali,Algerie Air,0,116,116
+2014,Qtr 3,August,10,Iran,HESA,HESA Iran 140,Tehran Iran,Airlines Sepahan,0,39,48
+2014,Qtr 3,August,30,Algeria,Antonov,Antonov An 12BKUR,Tamanraset Algeria,Alliance Air Ukraine,0,7,7
+2014,Qtr 3,August,31,Tanzania,Fokker,Fokker F 27 MK 5005Y,Mwanza Tanzania,Cargo Express Safari,0,3,3
+2014,Qtr 3,September,20,Papua,de Havilland Canada,de Havilland Canada DHC 6 Twin Otter 300P2,Near Port Moresby Papua,GuineaHevlift New,0,4,9
+2014,Qtr 4,October,4,Texas,Bell,Bell 206L,Wichita Falls Texas,Lifeteam Evac Air,0,2,4
+2014,Qtr 4,December,28,Congo,Antonov,Antonov An 264L,Near Uvira Congo,Sirin Air,0,6,6
+2015,Qtr 1,January,18,Syria,Antonov,Antonov AN 26,Near Abu adh Dhuhur Air Base Syria,Force Air Syrian,0,37,37
+2015,Qtr 1,February,4,Taiwan,ATR,ATR 72 600B,Taipei Taiwan,Transasia,0,43,58
+2015,Qtr 1,March,9,Argentina,Both Eurocopter,Both Eurocopter AS350B3LQ CGK,Villa Castelli Argentina,Private,0,10,10
+2015,Qtr 1,March,24,France,Airbus,Airbus A320 211D,Near Digne-Les-Bains France,Germanwings,0,150,150
+2015,Qtr 2,June,25,Alaska,De Havilland,de Havilland DHC 3T Vazar TurbineOtterN270PA,Ella Lake Alaska,Air Promech,0,9,9
+2015,Qtr 2,June,30,Indonesia,Lockheed,Lockheed C130 B HerculesA,Medan Indonesia,Force Air Indonesian - Military,19,122,122
+2015,Qtr 3,July,31,Colombia,CASA,CASA CN 235,Near Agustin Codazzi Colombia,Force Air Colombia - Military,0,11,11
+2015,Qtr 3,August,12,Indonesia,Pacific,Pacific AerospacePK KIG,Ninia Indonesia,Air Komala,0,1,6
+2015,Qtr 3,August,16,Papua,ATR,ATR 42 300PK,Tangok mountain Papua,Service Air Trigana,0,54,54
+2015,Qtr 3,September,5,near,Hawker Siddeley,Hawker Siddeley HS 1256V,Off Dakar Near,Senegal          Dioubel Senegalair,0,7,7
+2015,Qtr 3,September,15,Alaska,de Havilland Canada DHC 3T Turbine,de Havilland Canada DHC 3T Turbine OtterN928PK,Iliamna East Wind Lake Alaska,Lodge King Rainbow,0,3,7
+2015,Qtr 4,October,2,Afghanistan,Lockheed,Lockheed C 130J Hercules08,Jalalabad Afghanistan,Army U.S. - Military,2,11,11
+2015,Qtr 4,October,2,Indonesia,De Havilland,de Havilland DHC 6 Twin Otter PK,Near Masamba Indonesia,Mandari Avistar,0,10,10
+2015,Qtr 4,October,31,Egypt,Airbus,Airbus A321 231EI,Near Hasna Egypt,Metrojet,0,224,224
+2015,Qtr 4,October,31,Indonesia,De Havilland,de Havilland DCH 4T CaribouPK,Near Ilaga Indonesia,Service Air Trigana,0,4,4
+2015,Qtr 4,November,4,South,Antonov,Antonov 12BKEY 406,Juba South,Limited Services SudanAllied,0,41,43
+2015,Qtr 4,November,21,South,Aerospatiale AS 350B2,Aerospatiale AS 350B2 EcureuilZK HKU,Fox Glacier South,New Zealand          Valley Alpine Adventures,0,7,7
+2015,Qtr 4,November,24,Russia,Mil,Mil Mi 8TRA,Near Igarka Russia,Avia Turuhan,0,15,26
+2016,Qtr 1,January,8,Norrbotten,Canadair,Canadair CRJ 200SE,Akkajaure Lake Norrbotten,Sweden West Air Sweden,0,2,2
+2016,Qtr 1,February,2,Somalia,Airbus,Airbus A321 111SX,Near Mogadishu Somalia,Airlines Daallo,0,1,72
+2016,Qtr 1,February,24,Nepal,De Havilland,de Havilland DHC 6 Twin Otter 4009N,Dana Nepal,Air Tara,0,23,23
+2016,Qtr 1,February,26,Nepal,PAC,PAC 750XL9N AJB,250 miles northwest of Kathmandu Nepal,Airlines Kasthamandap,0,2,11
+2016,Qtr 1,March,9,Bangladesh,Antonov,Antonov AN 26 S2,Cox's Bazar Bangladesh,Ltd. Aviation True,0,3,4
+2016,Qtr 1,March,15,Ecuador,IAI Attava,IAI Attava 201 E 206,Fatima Pastaza Ecuador,Army Ecuador - Military,0,22,22
+2016,Qtr 1,March,19,Russia,Boeing,Boeing 737 8KN (WL)A6,Rostov-on-Don Russia,Flydubai,0,62,62
+2016,Qtr 1,March,29,Quebec,Mitsubishi,Mitsubishi MU 2B 60 MarquiseN246W,Magdelen Islands Quebec,Canada Marquise Aviation Corp.,0,7,7
+2016,Qtr 2,April,4,Tennessee,Bell,Bell 206LN16760,Near Pigeon Forge Tennessee,Helicopters Mountain Smoky,0,5,5
+2016,Qtr 2,April,13,Papua,Britten,Britten  Norman IslanderP2,Kiunga Papua,Aviation GuineaSunbird New,0,12,12
+2016,Qtr 2,April,29,"Norway	CHC",Eurocopter EC225LP Super Puma M2+,"Eurocopter EC225LP Super Puma M2+ 	LN OJF","Sorta Norway	CHC",Service Helikopter,0,13,13
+2016,Qtr 3,July,22,Indian,Antonov,Antonov 32K2743,Bay of Bengal Indian,Force Air OceanIndian,0,29,29
+2016,Qtr 3,July,30,Texas,Kubicek BB85Z Hot Air,Kubicek BB85Z Hot Air BalloonN2469L,Near Lockhart Texas,Rides Balloon Air Hot Texas of Heart,0,16,16
+2016,Qtr 3,August,5,United,Boeing,Boeing 777 31HA6,Dubai United,EmiratesEmirates Arab,1,0,300
+2016,Qtr 3,August,31,Alaksa,Cessna 208 Grand,"Cessna 208 Grand Caravan	N752RV",Russian Mission Alaksa,Aviiation Hageland,0,5,5
+2016,Qtr 4,November,28,Colombia,Avro,Avro RJ 85CP,Near La Union Colombia,Bolivia LAMIA,0,71,77
+2016,Qtr 4,December,3,Indonesia,M28,M28 SkytruckP 4201,Near Tanjung Pinanga Indonesia,Police Indonesian,0,13,13
+2016,Qtr 4,December,7,Pakistan,ATR,ATR  42,Near Havlien Pakistan,Airlines International Pakistan,0,48,48
+2016,Qtr 4,December,18,Papua,Lockheed,"Lockheed C 130H Hercules  	A",Near Wamena Papua,Indonesia Indonesian Air Force,0,13,13
+2016,Qtr 4,December,20,Colombia,Boeing,Boeing 727 2JOFHK,Puerto Carreno Colombia,Colombia Aerosucre,0,5,6
+2016,Qtr 4,December,25,Russia,Tupolev,Tupolev 154B 2RA,Near Adar Russia,Force Air Russian,0,92,92
+2017,Qtr 1,January,16,Kyrgyzstan,Boeing,Boeing 747 412FTC,Bishkek Kyrgyzstan,Airlines) (ACT Airlines Cargo My,35,4,4
+2017,Qtr 1,February,21,Victoria,Beechcraft B200 Super King,Beechcraft B200 Super King AirVH ZCR,Melbourne Victoria,Australia Australian Corporate Jet Centres PTY. LTD,0,5,5
+2017,Qtr 1,March,10,Turkey,Sikorsky,Sikorsky S 76CTC,Istanbul Turkey,Aviation Swan,0,7,7
+2017,Qtr 1,March,27,Zimbabwe,Britten,Britten  Norman BN2 IslanderC9,Mautaer Zimbabwe,Charter Air ETA,0,6,6
+2017,Qtr 2,May,5,West,Shorts,Shorts 300 200N334AC,Charleston West,Carriers Cargo VirginiaAir,0,2,2
+2017,Qtr 2,May,27,Nepal,Let,Let L 410UVP,Tenzing Nepal,Air Summit,0,2,3
+2017,Qtr 2,June,7,Myanmar,Shaanxi,Shaanxi Y 8F,Off Dawei Myanmar,Force Air Myanmar - Military,0,122,122
+2017,Qtr 2,June,28,South,Socata,Socata TB1 10 TobagoVH,Mount Gambier South,Flight AustraliaAngel,0,3,3
+2017,Qtr 3,July,10,Mississipi,Lockheed,Lockheed KC 130T Hercules165000,Near Itta Bena Mississipi,USMC,0,16,16
+2017,Qtr 3,September,30,Congo,Antonov,Antonov An 12BEX,Near Kinshasa Congo,Congo the of Republic Democratic the of Force Air,0,12,12
+2017,Qtr 4,October,12,Angola,Embraer,Embraer EMB 120ERD2,Near Cuílo Angola,Guicango,0,7,7
+2017,Qtr 4,October,14,Ivory,Antonov,Antonov An 26,Abidjan Ivory,Charter Cargo International CoastValan,0,4,10
+2017,Qtr 4,November,15,Tanzania,Cessna 208B Grand,Cessna 208B Grand Caravan5H EGG,Empakaai Tanzania,Aviation Costal,0,11,11
+2017,Qtr 4,December,13,Saskatchewan,ATR42,ATR42  320C,Near Fond-du-Lac Saskatchewan,Aviation Wind West,0,1,25
+2017,Qtr 4,December,31,Costa,Cessna 208B Grand,Cessna 208B Grand CaravanTI BEI,Punta Islita Costa,Air RicaNaure,0,12,12
+2018,Qtr 1,January,29,Suiyang,Shaanxi,Shaanxi Y 8GX,Zhengchang Suiyang,Guizhou Province          County People's Liberation Army Air Force,0,12,12
+2018,Qtr 1,February,10,Arizona,Eurocopter EC,Eurocopter EC 130B4N155GC,Grand Canyon Arizona,Papillon,0,3,7
+2018,Qtr 1,February,11,Russia,Antonov,Antonov AN 148,Argunovo Russia,Airlines Saratov,0,71,71
+2018,Qtr 1,February,18,Iran,ATR,ATR 72 212EP,Kohangan village Iran,Airlines Aseman Iran,0,66,66
+2018,Qtr 1,March,6,Syria,Antonov,Antonov An 26RF,Latakia Syria,Force Air Russian - Military,0,39,39
+2018,Qtr 1,March,11,Iran,Canadair,Canadair CL 600,81 miles SW o fShahre Kurd Iran,Aviation Mc,0,11,11
+2018,Qtr 1,March,11,New,Eurocopter AS,Eurocopter AS 350B2N350LH,New York New,Helicopters YorkLiberty,0,5,6
+2018,Qtr 1,March,12,Nepal,de Havilland Canada,de Havilland Canada DHC 8,Kathmandu Nepal,Airlines US-Bangla,0,51,71
+2018,Qtr 2,April,11,Algeria,Ilyushin,Ilyushin 76 TD7T,Boufarik AB Algeria,Force Air Algerian - Military,0,257,257
+2018,Qtr 2,April,17,Pennsylvania,Boeing,Boeing 737 7H4N722SW,NW of Philadelphia Pennsylvania,Airlines Southwest,0,1,149
+2018,Qtr 2,May,2,Georgia,Lockheed,Lockheed HC 130H Hercules65,Port Wentworth Georgia,Force Air US - Military,0,9,9
+2018,Qtr 2,May,18,Cuba,Boeing,Boeing 737 201XA,Havana Cuba,Air) Global from (leased Cubana,0,112,113
+2018,Qtr 2,June,5,Kenya,Cessna 208B Grand,"Cessna 208B Grand Carivan	5Y CAC",Near Njabini Kenya,SAX Fly,0,10,10
+2018,Qtr 3,July,10,South,Convair,Convair CV 340ZS,Pretoria South,Air AfricaRovos,1,1,19
+2018,Qtr 3,August,4,Switzerland,Junkers,Junkers JU 52HB,Flims Switzerland,Air Ju,1,20,20
+2018,Qtr 3,September,17,Iran,Ilyushin,Ilyushin Il 20MRF,Near Latakia-Khmeimim Air Base Iran,Force Air Russian - Military,0,15,15
+2018,Qtr 3,September,28,Micronesia,Boeing,Boeing 737 8BKP2,Chuuk Micronesia,Niugini Air,0,1,47
+2018,Qtr 4,October,29,Indonesia,Boeing,Boeing 737 MAX 8PK,Off Jakarta Indonesia,Air Lion,0,189,189
+2018,Qtr 4,November,6,Guyana,Boeing,Boeing 757 N23N524AT,Georgetown Guyana,Airways Jamaica Fly,0,1,128
+2019,Qtr 1,January,14,Iran,Boeing,Boeing 707 3J9CEP,Karaj Iran,Air Saha,0,15,16
+2019,Qtr 1,February,23,Texas,Boeing,Boeing 767 375ERN1217A,Houston Texas,Amazon serving Air Atlas,0,3,3
+2019,Qtr 1,March,9,Colombia,Douglas,Douglas DC 3HK,Vereda La Bendicion Colombia,Colombia Aereo Laser,0,14,14
+2019,Qtr 1,March,10,Ethiopia,Boeing 737 Max,Boeing 737 Max 8ET AVJ,Bishoftu Ethiopia,Airlines Ethiopian,0,157,157
+2019,Qtr 2,April,16,Chile,Pilatus,Pilatus  Britten Norman BN,Puerto Montt Chile,Aereos Service Archipelagos,0,6,6
+2019,Qtr 2,May,5,Mexico,Canadair,Canadair CL 600,Near Monclava Mexico,Solutions Aircraft TVPX,0,13,13
+2019,Qtr 2,May,5,Russia,Sukhoi,Sukhoi Superjet 100,Moscow Russia,Airlines International Russian Aeroflot,0,41,78
+2019,Qtr 2,June,3,India,Antonov,Antonov An 32K2752,Near Lipo India,Force Air Indian - Military,0,13,13
+2019,Qtr 3,July,30,India,Beechcraft B300 King,Beechcraft B300 King Air766,Rawalpindi India,Army Pakistan - Military,14,5,5
+2019,Qtr 3,September,11,Ohio,Convair,Convair CV 440FN24DR,Toledo Ohio,Private,0,2,2
+2019,Qtr 4,October,4,Ukraine,Antonov,Antonov An 12BKUR,Lviv Ukraine,Alliance Air Ukraine,0,5,8
+2019,Qtr 4,November,24,Democratic,Dornier,Dornier 228 2019S,Goma Democratic,Congo Bee CongoBusy of Republic,7,19,19
+2019,Qtr 4,December,27,Kazakhstan,Fokker,Fokker 100UP F100,Almaty Kazakhstan,Air Bek,0,12,98
+2020,Qtr 1,January,2,Sudan,Antonov,Antonov An12 A,Geneina Sudan,Force Air Sudanese,0,18,18
+2020,Qtr 1,January,8,Iran,Boeing,Boeing 737 8KV WLUR,Near Shahriah Iran,Airlines International Ukraine,0,176,176
+2020,Qtr 1,February,5,Turkey,Boeing,Boeing 737 86JTC,Istanbul Turkey,Airlines Pegasus,0,3,177
+2020,Qtr 1,March,29,Philippines,IAI 1124A Westwind,IAI 1124A Westwind IIRP C5880,Manila Philippines,Inc. Air Lion,0,8,8
+2020,Qtr 2,May,22,Pakistan,Airbus,Airbus A320 214AP,Karachi Pakistan,Airline International Pakistan,1,97,99
+2020,Qtr 3,August,7,India,Boeing,Boeing 737 8HGVT,Calicut India,Exppress India Air,0,20,190
+2020,Qtr 3,August,22,South,Antonov,Antonov 26BEX 126,Juba South,Aviaiton West SudanSouth,0,7,8
+2020,Qtr 3,September,25,Ukraine,Antonov An26SH76,Antonov An26SH76 yellow,Near Chuguev Ukraine,Force Air Ukraine - Military,0,26,27
+2021,Qtr 1,January,9,Indonesia,Boeing,Boeing 737 524PK,Near Jakarta Indonesia,Air Sriwijaya,0,62,62
+2021,Qtr 1,March,2,Sudan,Let,Let L 410UVP,Pieri Sudan,Airlines Supreme Sudan South,0,10,10
+2021,Qtr 1,March,28,Alaska,Eurocopter,Eurocopter AS350B3 EcureuilN351SH,Near Butte Alaska,Helicopters Soloy,0,5,6
+2021,Qtr 2,May,21,Nigeria,Beechcraft B300 King Air,Beechcraft B300 King Air 350iNAF203,Near Kaduna Nigeria,Force Air Nigerian - Military,0,11,11
+2021,Qtr 2,June,10,Myanmar,Beechcraft,Beechcraft 1900D4610,Near Pyin Oo Lwin Myanmar,Force Air Myanmar - Military,0,12,14
+2021,Qtr 3,July,4,Sulu,Lockheed,Lockheed C 130H Hercules5125,Patikul Sulu,Philippines Military - Philippine Air Force,3,50,96
+2021,Qtr 3,July,6,Russia,Antonov An,"Antonov An 26B 100	RA",Palana Russia,Enterprise Aviation Kamchatka,0,28,28
+2021,Qtr 3,September,12,Russia,Let,Let L 410UVP,Kazachinskoye  Russia,Aeroservice/Si,0,4,16
+2021,Qtr 4,December,27,California,Learjet,Learjet 35AN880Z,El Cajon California,Jet Med,0,4,4
+2022,Qtr 1,March,22,Guangxi,Boeing,Boeing 737 89P WLB,Wuzhou Guangxi,China China Eastern Airlines,0,132,132
+2022,Qtr 3,July,16,Greece,Antonov,Antonov An 12UR,Eleftheroupolis Greece,Meridian,0,8,8
+2022,Qtr 4,November,6,Tanzania,ATR,ATR 42 5005H,Bukoba Tanzania,Air Precision,0,19,43
+2022,Qtr 4,November,18,Peru,Airbus,Airbus 320 271NCC,Lima Peru,LATAM,2,0,108
+2022,Qtr 4,November,21,Colombia,Piper,Piper PA 31,Medellín Colombia,SAS Aero,0,8,8
+2023,Qtr 1,January,15,Nepal,ATR,ATR 72 500,Pokhara Nepal,Airlines Yeti,0,72,72
+2023,Qtr 3,September,16,Brazil,Embraer,Embraer EMB 110P1 BandeirantePT,Barcelos Brazil,Aerotaxi Manaus,0,14,14
