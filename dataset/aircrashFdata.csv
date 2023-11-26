@@ -1,6 +1,6 @@
 Year,Quarter,Month,Day,Country/Region,Aircraft Manufacturer,Aircraft,Location,Operator,Sum_of_Ground,Sum_of_Fatalities_air,Sum_of_Aboard
-1908,Qtr 3,September,17,Virginia,Wright Flyer,Wright Flyer III,Fort Myer Virginia,Army U.S. - Military,0,1,2
-1912,Qtr 3,July,12,New,Dirigible,Dirigible,Atlantic City New,Navy U.S. - JerseyMilitary,0,5,5
+1908,Qtr 3,September,17,USA,Wright Flyer,Wright Flyer III,Fort Myer Virginia,Army U.S. - Military,0,1,2
+1912,Qtr 3,July,12,USA,Dirigible,Dirigible,Atlantic City New,Navy U.S. - JerseyMilitary,0,5,5
 1913,Qtr 3,August,6,British,Curtiss,Curtiss seaplane,Victoria British,Canada          Columbia Private,0,1,1
 1913,Qtr 4,October,17,Germany,Zeppelin,Zeppelin L 2 (airship),Near Johannisthal Germany,Navy German - Military,0,28,28
 1915,Qtr 1,March,5,Belgium,Zeppelin,Zeppelin L 8 (airship),Tienen Belgium,Navy German - Military,0,17,41
@@ -19,22 +19,22 @@ Year,Quarter,Month,Day,Country/Region,Aircraft Manufacturer,Aircraft,Location,Op
 1918,Qtr 4,December,16,New,De Havilland,De Havilland DH 497,Elizabeth New,Service Mail Aerial JerseyUS,0,1,1
 1919,Qtr 2,May,25,Ohio,De Havilland,De Havilland DH 461,Cleveland Ohio,Service Mail Aerial US,0,1,1
 1919,Qtr 3,July,19,Pennsylvania,De Havilland,De Havilland DH 482,Dix Run Pennsylvania,Service Mail Aerial US,0,1,1
-1919,Qtr 3,July,21,Illinois,FD Type,FD Type Dirigible,Chicago Illinois,Tire Goodyear Express Air Wingfoot,10,3,0
+1919,Qtr 3,July,21,USA,FD Type,FD Type Dirigible,Chicago Illinois,Tire Goodyear Express Air Wingfoot,10,3,0
 1919,Qtr 3,August,2,Italy,Caproni,Caproni Ca.48,Verona Italy,Company Caproni,0,14,14
 1919,Qtr 4,October,2,England,De Havilland,De Havilland DH 4,Newcastle England,Travel and Transport Aircraft,0,1,1
 1919,Qtr 4,October,14,Maryland,Curtiss,Curtiss R 4LM32,Cantonsville Maryland,Service Mail Aerial US,0,1,1
 1919,Qtr 4,October,20,Kent,De Havilland,De Havilland DH 4G,English Channel off Forkstone Kent,Travel and Transport Aircraft,0,0,0
 1919,Qtr 4,October,30,New,De Havilland,De Havilland DH.477,Long Valley New,Service Mail Aerial JerseyUS,0,1,1
 1919,Qtr 4,December,11,Surrey,De Havilland,De Havilland DH 4G,Catherham Surrey,UKAircraft Travel Transport,0,1,1
-1920,Qtr 1,March,10,Indiana,De Havilland,De Havilland DH 465,New Paris Indiana,Service Mail Aerial US,0,1,1
-1920,Qtr 1,March,30,New,De Havilland,De Havilland DH 472,Newark New,Service Mail Aerial JerseyUS,0,1,1
-1920,Qtr 2,April,10,New,Curtiss,Curtiss R 4LM49,Newark New,Service Mail Aerial JerseyUS,0,1,2
-1920,Qtr 2,April,11,New,Curtiss,Curtiss JN 4H44,Heller Field New,Service Mail Aerial JerseyUS,0,1,2
-1920,Qtr 2,May,12,Iowa,De Havilland,De Havilland DH 479,Oskaloosa Iowa,Service Mail Aerial US,0,1,2
-1920,Qtr 2,June,6,Ohio,De Havilland,De Havilland DH 4204,Cleveland Ohio,Service Mail Aerial US,0,1,1
+1920,Qtr 1,March,10,USA,De Havilland,De Havilland DH 465,New Paris Indiana,Service Mail Aerial US,0,1,1
+1920,Qtr 1,March,30,USA,De Havilland,De Havilland DH 472,Newark New,Service Mail Aerial JerseyUS,0,1,1
+1920,Qtr 2,April,10,USA,Curtiss,Curtiss R 4LM49,Newark New,Service Mail Aerial JerseyUS,0,1,2
+1920,Qtr 2,April,11,USA,Curtiss,Curtiss JN 4H44,Heller Field New,Service Mail Aerial JerseyUS,0,1,2
+1920,Qtr 2,May,12,USA,De Havilland,De Havilland DH 479,Oskaloosa Iowa,Service Mail Aerial US,0,1,2
+1920,Qtr 2,June,6,USA,De Havilland,De Havilland DH 4204,Cleveland Ohio,Service Mail Aerial US,0,1,1
 1920,Qtr 3,July,20,Columbia,Farman,Farman F 40,Cartagena Columbia,Aérea Navegación de Colombiana Compañia,0,1,1
 1920,Qtr 3,August,16,England,Armstrong,Armstrong  Whitworth F,Bedford England,Air By,0,1,1
-1920,Qtr 3,August,16,Maryland,De Havilland,De Havilland DH 4317,College Park Maryland,Service Mail Aerial US,0,1,1
+1920,Qtr 3,August,16,USA,De Havilland,De Havilland DH 4317,College Park Maryland,Service Mail Aerial US,0,1,1
 1920,Qtr 3,September,1,New,Junkers,Junkers JL 6305,Morristown New,Service Mail Aerial JerseyUS,0,2,2
 1920,Qtr 3,September,15,Ohio,Junkers,Junkers F 13308,Pemberville Ohio,Service Mail Aerial US,0,2,2
 1920,Qtr 3,September,27,Pennsylvania,De Havilland,De Havilland DH 4316,Hillersburg Pennsylvania,Service Mail Aerial US,0,1,1

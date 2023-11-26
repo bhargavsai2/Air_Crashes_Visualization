@@ -4,20 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Air Crash since 1908</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="CSS/gameInfo.css"-->
+
 </head>
 <style>
     html{
         height: 100vh;
     }
     body {
-        background: linear-gradient(to bottom, #606c88 0%,#3f4c6b 100%);
-font-family: 'Source Sans Pro', sans-serif;
-color: white !important;
+        background: #f9f9f9;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
     }
     .mainHead{
-        color: white;
+ 
         font-weight: bold;
         text-align: center;
         font-size: 2.5rem;
@@ -28,6 +27,7 @@ color: white !important;
     /*bar*/
     svg.bar{
         width: 100%;
+        
     }
     .viz-1 .tooltip {
             position: absolute;
@@ -44,9 +44,10 @@ color: white !important;
         }
     .viz-1 .bar {
             opacity: 1;
+
         }
         .viz-1 .grid line {
-            stroke: rgba(220, 220, 220, 0.317);
+            stroke: gainsboro;
         }
         .viz-1 .grid path {
             stroke-width: 0;
@@ -59,14 +60,14 @@ color: white !important;
     .pie {
         position: relative;
         top:5%;
-        filter: drop-shadow(0 2px 0px #333);
+        /*filter: drop-shadow(0 1px 3px #333);*/
     }
     .pie .data-path:hover {
         cursor: pointer;
     }
     .pie .data-text {
         transition: transform .2s ease-in-out;
-        fill: #fff;
+        fill: #333;
     }
     .pie .data-text__value {
         font-size: 2rem;
@@ -83,7 +84,7 @@ color: white !important;
         animation: fadeGraphTextIn .5s forwards;
     }
     .pie .legend-text {
-        fill: #fff;
+        fill: #333;
     }
     @keyframes fadeGraphTextIn {
         from {
@@ -99,7 +100,7 @@ color: white !important;
             position: absolute;
             text-align: center;
             width: 120px;
-            height: 28px;
+            
             padding: 2px;
             font: 12px sans-serif;
             background: lightsteelblue;
@@ -113,16 +114,25 @@ color: white !important;
             font-size: 12px;
         }
         .viz-3 .legend rect {
-            fill: white;
+            fill: 333;
             stroke: black;
             opacity: 0.8;
         }
         .viz-3 text {
-            font-size: 6px;
+            font-size: 8px;
             font-weight: bold;
-            fill: #000000;
+            fill: #333;
             pointer-events: none;
         }
+        .viz-3 .selected {
+            stroke: rgb(255, 255, 255);
+            stroke-width: 1px;
+        }
+        .viz-3 .legend-heading{
+            font-size: 15px;
+            color: 333;
+        }
+
 
         /*tree node*/
         .treenode .node {
@@ -139,6 +149,7 @@ color: white !important;
         .treenode text {
             pointer-events: none;
         }
+      
 
 
 
@@ -156,7 +167,7 @@ color: white !important;
         <div class="row">
             <div class="col-md-9 viz-1">
                 <div class="tooltip"></div>
-                <svg id="visualization1" height="400"></svg>
+                <svg id="visualization1" height="380"></svg>
                
             </div>
             <div class="col-md-3">
@@ -165,9 +176,11 @@ color: white !important;
         </div>
         <div class="row pt-1">
             <div class="col-md-7 viz-3">
+                <h5 align="center">Countries with most crashes map</h4>
                 <svg id="visualization3" width="400" height="400"></svg>
             </div>
             <div class="col-md-5">
+                <h5 align="center">Top 10 Aircraft with most crashes</h4>
                 <svg id="visualization4" width="400" height="400"></svg>
             </div>
         </div>
@@ -184,6 +197,11 @@ color: white !important;
     let colorScale4 = d3.scaleSequential(d3.interpolateBlues);
     let treemapLayout = d3.treemap().size([680, 350]).padding(1);
     let barSvg;
+    const labelMapping = {
+        "Sum_of_Ground": "Sum of Ground",
+        "Sum_of_Fatalities_air": "Sum of Fatalities air",
+        "Sum_of_Aboard": "Sum of Aboard"
+};
    // Define visualization functions
 function visualization1(data) {
     // Code for visualization 1
@@ -289,9 +307,10 @@ function visualization1(data) {
                   .on("mouseover", function(event, d) {
                       const key = d3.select(this.parentNode).datum().key;
                       const value = d.data[key];
+                      const displayKey = labelMapping[key];
                       tooltip
                         .style("opacity", 1)
-                        .html(`Year: ${d.data.Year}<br>${key}: ${value}`)
+                        .html(`Year: ${d.data.Year}<br>${displayKey}: ${value}`)
                         .style("left", (event.pageX + 10) + "px")
                         .style("top", (event.pageY - 10) + "px");
                   })
@@ -299,6 +318,8 @@ function visualization1(data) {
                       tooltip.style("opacity", 0);
                   });
             });
+
+         
 }
 
 function visualization2(data) {
@@ -312,9 +333,9 @@ function visualization2(data) {
     });
 
     const pieData = [
-        { name: 'Sum_of_Ground', value: totalGround, color: '#18FFFF' },
-        { name: 'Sum_of_Fatalities_air', value: totalFatalities, color: '#0288D1' },
-        { name: 'Sum_of_Aboard', value: totalAboard, color: '#BF360C' }
+        { name: 'Sum of Ground', value: totalGround, color: '#18FFFF' },
+        { name: 'Sum of Fatalities air', value: totalFatalities, color: '#0288D1' },
+        { name: 'Sum of Aboard', value: totalAboard, color: '#BF360C' }
     ];
 
     // Pie chart setup
@@ -350,7 +371,6 @@ function visualization2(data) {
         .enter().append('path')
         .attr('d', arc)
         .attr('fill', d => color(d.data.name))
-        .attr('id', d => 'pie_' + d.data.name.replace(/ /g, "_"))
         .attr('class', 'data-path')
         .on('mouseover', function(event, d) {
                 const path = d3.select(this);
@@ -384,17 +404,20 @@ function visualization2(data) {
 
 
 function visualization3(data) {
-    const width = 800, height = 350;
+    const width = 930, height = 340;
 
     const svg = d3.select("#visualization3")
         .attr('class', 'geomap')
         .attr("width", width)
         .attr("height", height);
 
+      
+
     const projection = d3.geoMercator()
         .scale(130)
         .center([0, 30])
         .translate([width / 2, height / 2]);
+
     const path = d3.geoPath().projection(projection);
 
     const crashCounts = new Map();
@@ -410,20 +433,72 @@ function visualization3(data) {
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-    // Load external GeoJSON data
-    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(function(topo) {
-        let centered;
+    let centered;
 
-        const map = svg.append("g");
+    const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .on('zoom', (event) => {
+            map.attr('transform', event.transform);
+        });
 
-        map.selectAll("path")
+    const map = svg.append('g')
+        .call(zoom); // Apply the zoom behavior here
+
+
+    // Legend
+    const legendHeight = 300, legendWidth = 20, legendMargin = 10;
+const legend = svg.append("g")
+    .attr("id", "legend")
+    .attr("transform", "translate(" + (width - 30 - legendMargin) + ",100)");
+
+// Legend Heading
+legend.append("text")
+    .attr("class", "legend-heading")
+    .attr("y", -10)
+    .attr("x", -legendHeight / 2)
+    .attr("transform", "rotate(-90)")
+    .style("text-anchor", "middle")
+    .text("Crashes");
+
+// Note the domain here is reversed for the vertical legend to show larger values at the top
+const legendScale = d3.scaleLinear()
+    .domain([30, 0])
+    .range([0, legendHeight]);
+
+    legend.selectAll("rect")
+    .data(colorScale.range().map(function(color) {
+        var d = colorScale.invertExtent(color);
+        if (d[0] == null) d[0] = legendScale.domain()[0];
+        if (d[1] == null) d[1] = legendScale.domain()[1];
+        return d;
+    }))
+    .enter().append("rect")
+    .attr("width", legendWidth)
+    .attr("y", function(d) { return legendScale(d[1]); }) // Use d[1] here for the y position
+    .attr("height", function(d) { return legendScale(d[0]) - legendScale(d[1]); }) // Height calculated from the scale
+    .attr("fill", function(d) { return colorScale(d[0]); });
+
+legend.append("g")
+    .attr("transform", "translate(" + legendWidth + ",20)")
+    .call(d3.axisRight(legendScale)
+        .tickSize(5)
+        .tickValues(colorScale.domain()))
+    .select(".domain")
+    .remove();
+    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(function (topo) {
+
+        const countries = map.selectAll("path")
             .data(topo.features)
             .join("path")
+            // Draw each country
             .attr("d", path)
-            .attr("fill", function(d) {
+            // Set the color
+            .attr("fill", function (d) {
                 const crashes = crashCounts.get(d.properties.name) || 0;
                 return colorScale(crashes);
             })
+            // Add a class and a click event to each country
+            .attr("class", "country")
             .on("click", clicked)
             .on("mouseover", function(event, d) {
                 const crashes = crashCounts.get(d.properties.name) || 0;
@@ -453,36 +528,31 @@ function visualization3(data) {
             });
 
         function clicked(event, d) {
+            const country = d3.select(this);
+            const isSelected = country.classed("selected");
+            countries.classed("selected", false); // Remove selection from all countries
+            country.classed("selected", !isSelected); // Toggle the selection
+
             const [[x0, y0], [x1, y1]] = path.bounds(d);
-    event.stopPropagation();
+            event.stopPropagation();
+            centered = centered !== d && !isSelected ? d : null;
+            map.selectAll('.country').classed('active', centered && function(d) { return d === centered; });
 
-    let dx = x1 - x0,
-        dy = y1 - y0,
-        x = (x0 + x1) / 2,
-        y = (y0 + y1) / 2,
-        scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height))),
-        translate = [width / 2 - scale * x, height / 2 - scale * y];
+            map.transition()
+                .duration(750)
+                .attr("transform", centered ? `translate(${width / 2},${height / 2})scale(4)translate(${-x0 - (x1 - x0) / 2},${-y0 - (y1 - y0) / 2})` : `translate(0,0)scale(1)`);
+        }
 
-    map.transition()
-        .duration(750)
-        .style("stroke-width", 1.5 / scale + "px")
-        .attr("transform", `translate(${translate})scale(${scale})`);
-
-    centered = centered === d ? null : d;
-
-}
-// Clicking outside any country resets the zoom
-svg.on("click", () => {
-    if (centered) {
-        map.transition()
-            .duration(750)
-            .style("stroke-width", "1.5px")
-            .attr("transform", "");
-        centered = null;
-    }
-});
-
-}).catch(function(error) {
+        svg.on("click", () => {
+            countries.classed("selected", false);
+            if (centered) {
+                map.transition()
+                    .duration(750)
+                    .attr("transform", `translate(0,0)scale(1)`);
+                centered = null;
+            }
+        });
+    }).catch(function (error) {
         console.error("Error loading GeoJSON: ", error);
     });
 }
