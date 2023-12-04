@@ -206,9 +206,8 @@
     let treemapLayout = d3.treemap().size([680, 350]).padding(1);
     let barSvg;
     const labelMapping = {
-        "Sum_of_Ground": "Sum of Ground",
-        "Sum_of_Fatalities_air": "Sum of Fatalities air",
-        "Sum_of_Aboard": "Sum of Aboard"
+        "Sum_of_Survived": "Sum of Survived",
+        "Sum_of_Deaths": "Sum of Deaths",
 };
    // Define visualization functions
 function visualization1(data) {
@@ -226,19 +225,40 @@ function visualization1(data) {
 
         const tooltip = d3.select(".viz-1 .tooltip");
         //console.log(tooltip)
-        let aggregatedData = {};
-        data.forEach(d => {
+       let aggregatedData = {};
+        /* data.forEach(d => {
             if (!aggregatedData[d.Year]) {
                 aggregatedData[d.Year] = { Year: d.Year, Sum_of_Ground: 0, Sum_of_Fatalities_air: 0, Sum_of_Aboard: 0 };
             }
             aggregatedData[d.Year].Sum_of_Ground += +d.Sum_of_Ground;
             aggregatedData[d.Year].Sum_of_Fatalities_air += +d.Sum_of_Fatalities_air;
             aggregatedData[d.Year].Sum_of_Aboard += +d.Sum_of_Aboard;
-        });
+            debugger;
+        });*/
+        data.forEach(d => {
+        if (!aggregatedData[d.Year]) {
+            aggregatedData[d.Year] = {
+                Year: d.Year,
+                Sum_of_Survived: 0,
+                Sum_of_Deaths: 0
+            };
+        }
+        const fatalities = +d.Sum_of_Fatalities_air;
+        const aboard = +d.Sum_of_Aboard;
+        const ground = +d.Sum_of_Ground;
+
+        aggregatedData[d.Year].Sum_of_Survived += Math.max(0,(aboard - fatalities));
+        aggregatedData[d.Year].Sum_of_Deaths += fatalities + ground;
+
+        console.log(`Survived :${aggregatedData[d.Year].Sum_of_Survived} in year ${d.year}`);
+        console.log(`Dead :${aggregatedData[d.Year].Sum_of_Deaths}`);
+    });
 
         let processedData = Object.values(aggregatedData);
-        const subgroups = ["Sum_of_Ground", "Sum_of_Fatalities_air", "Sum_of_Aboard"];
-        const color = d3.scaleOrdinal().domain(subgroups).range(['#18FFFF', '#0288D1', '#BF360C']);
+        /*const subgroups = ["Sum_of_Ground", "Sum_of_Fatalities_air", "Sum_of_Aboard"];
+        const color = d3.scaleOrdinal().domain(subgroups).range(['#18FFFF', '#0288D1', '#BF360C']);*/
+        const subgroups = ["Sum_of_Survived", "Sum_of_Deaths"];
+    const color = d3.scaleOrdinal().domain(subgroups).range(['#0288D1', '#BF360C']);
 
         x = d3.scaleBand()
             .domain(processedData.map(d => d.Year))
@@ -273,7 +293,7 @@ function visualization1(data) {
             barSvg.append("text")
         .attr("class", "brush-instruction")
         .attr("x", 200) 
-        .attr("y", 55) 
+        .attr("y", 70) 
         .attr("text-anchor", "middle")
         .style("position", "absolute")  
         .style("font-size", "14px") 
@@ -281,7 +301,8 @@ function visualization1(data) {
         .text("Drag to create a brush for selected years");
 
         const y = d3.scaleLinear()
-            .domain([0, d3.max(processedData, d => +d.Sum_of_Ground + +d.Sum_of_Fatalities_air + +d.Sum_of_Aboard)])
+            /*.domain([0, d3.max(processedData, d => +d.Sum_of_Ground + +d.Sum_of_Fatalities_air + +d.Sum_of_Aboard)])*/
+            .domain([0, d3.max(processedData, d => +d.Sum_of_Survived + +d.Sum_of_Deaths)])
             .range([barHeight, 0]);
         barSvg.append("g").call(d3.axisLeft(y).ticks(5));
 
@@ -354,17 +375,18 @@ function visualization1(data) {
 }
 
 function visualization2(data) {
-    let totalGround = 0, totalFatalities = 0, totalAboard = 0;
+    //let totalGround = 0, totalFatalities = 0, totalAboard = 0;
+    let totalSurvived = 0, totalDeaths = 0;
     
     // Define legend dimensions and positioning
-    const legendRectSize = 10;
+    const legendRectSize = 15;
     const legendSpacing = 3;
     const legendHorizontal = 30; // Spacing between legends horizontally
 
     let currentX = 0;
 
 
-    data.forEach(d => {
+    /*data.forEach(d => {
         totalGround += +d.Sum_of_Ground;
         totalFatalities += +d.Sum_of_Fatalities_air;
         totalAboard += +d.Sum_of_Aboard;
@@ -374,6 +396,20 @@ function visualization2(data) {
         { name: 'Sum of Ground', value: totalGround, color: '#18FFFF' },
         { name: 'Sum of Fatalities air', value: totalFatalities, color: '#0288D1' },
         { name: 'Sum of Aboard', value: totalAboard, color: '#BF360C' }
+    ];*/
+
+    data.forEach(d => {
+        const fatalities = +d.Sum_of_Fatalities_air;
+        const aboard = +d.Sum_of_Aboard;
+        const ground = +d.Sum_of_Ground;
+
+        totalSurvived += aboard - fatalities;
+        totalDeaths += fatalities + ground;
+    });
+
+    const pieData = [
+        { name: 'Sum of Survived', value: totalSurvived, color: '#0288D1' },
+        { name: 'Sum of Deaths', value: totalDeaths, color: '#BF360C' }
     ];
 
     // Pie chart setup
@@ -419,7 +455,7 @@ const legend = svg.selectAll('.legend')
     .append('g')
     .attr('class', 'legend')
     .attr('transform', (d, i) => {
-        const result = `translate(${currentX}, ${svgHeight - legendRectSize + 50})`;
+        const result = `translate(${currentX+80}, ${svgHeight - legendRectSize + 50})`;
         currentX += legendHorizontal + getTextWidth(d.name, "12px sans-serif") + legendRectSize + legendSpacing;
         return result;
     });
