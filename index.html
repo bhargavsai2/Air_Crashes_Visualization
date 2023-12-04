@@ -270,6 +270,16 @@ function visualization1(data) {
             .attr("dy", ".15em")
             .attr("transform", "rotate(-40)");
 
+            barSvg.append("text")
+        .attr("class", "brush-instruction")
+        .attr("x", 200) 
+        .attr("y", 55) 
+        .attr("text-anchor", "middle")
+        .style("position", "absolute")  
+        .style("font-size", "14px") 
+        .style("fill", "#666") 
+        .text("Drag to create a brush for selected years");
+
         const y = d3.scaleLinear()
             .domain([0, d3.max(processedData, d => +d.Sum_of_Ground + +d.Sum_of_Fatalities_air + +d.Sum_of_Aboard)])
             .range([barHeight, 0]);
@@ -333,6 +343,12 @@ function visualization1(data) {
                       tooltip.style("opacity", 0);
                   });
             });
+        
+           /* barSvg.append("text")
+    .attr("x", function(d) { return x(d) - 3; })
+    .attr("y", barHeight / 2)
+    .attr("dy", ".35em")
+    .text(function(d) { return d; });*/
 
          
 }
