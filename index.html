@@ -36,7 +36,7 @@
             height: auto;
             padding: 8px;
             font: 12px sans-serif;
-            background: lightsteelblue;
+            background: #b0c4de;
             border: 0px;
             border-radius: 8px;
             pointer-events: none;
@@ -109,7 +109,7 @@
             pointer-events: none;
             opacity: 0;
         }
-        .viz-3 .legend {
+        .viz-3 #legend .legend-title {
             font-family: sans-serif;
             font-size: 12px;
         }
@@ -121,8 +121,12 @@
         .viz-3 text {
             font-size: 8px;
             font-weight: bold;
-            fill: #333;
+            fill: #ffffff;
             pointer-events: none;
+        }
+        .viz-3 #legend text{
+            fill:#333;
+            font-size: 10px;
         }
         .viz-3 .selected {
             stroke: rgb(255, 255, 255);
@@ -130,7 +134,7 @@
         }
         .viz-3 .legend-heading{
             font-size: 15px;
-            color: 333;
+            fill: #333;
         }
 
 
@@ -179,8 +183,9 @@
                 <h5 align="center">Countries with most crashes map</h4>
                 <svg id="visualization3"></svg>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 viz-4">
                 <h5 align="center">Top 10 Aircraft with most crashes</h4>
+                    <div id="treemap-tooltip" class="tooltip" style="opacity:0; position: absolute; pointer-events: none;"></div>
                 <svg id="visualization4" width="400" height="400"></svg>
             </div>
         </div>
@@ -194,7 +199,10 @@
 <script>
     let fullData;
     let x;
-    let colorScale4 = d3.scaleSequential(d3.interpolateBlues);
+    let colorScale4 = d3.scaleSequential(d3.interpolateReds);
+    const colorScale = d3.scaleThreshold()
+        .domain([0, 10, 15, 20, 25, 30, 35])
+        .range(d3.schemeReds[7]);
     let treemapLayout = d3.treemap().size([680, 350]).padding(1);
     let barSvg;
     const labelMapping = {
@@ -331,6 +339,14 @@ function visualization1(data) {
 
 function visualization2(data) {
     let totalGround = 0, totalFatalities = 0, totalAboard = 0;
+    
+    // Define legend dimensions and positioning
+    const legendRectSize = 10;
+    const legendSpacing = 3;
+    const legendHorizontal = 30; // Spacing between legends horizontally
+
+    let currentX = 0;
+
 
     data.forEach(d => {
         totalGround += +d.Sum_of_Ground;
@@ -345,14 +361,16 @@ function visualization2(data) {
     ];
 
     // Pie chart setup
-    const viewWidth = 300,
-          viewHeight = 300,
+    const viewWidth = 330,
+          viewHeight = 330,
           svgWidth = viewHeight,
           svgHeight = viewHeight,
-          thickness = 40,
+          thickness = 50,
           radius = Math.min(svgWidth, svgHeight) / 2,
           color = d3.scaleOrdinal()
                     .range(pieData.map(k => k.color));
+    
+    //const legendWidth = viewWidth; 
 
     const svg = d3.select("#visualization2")
         .attr('viewBox', `0 0 ${viewWidth + thickness} ${viewHeight + thickness}`)
@@ -376,6 +394,43 @@ function visualization2(data) {
         .enter().append('path')
         .attr('fill', d => color(d.data.name))
         .attr('class', 'data-path');
+
+    
+    // Create the legend group below the pie chart
+const legend = svg.selectAll('.legend')
+    .data(pieData)
+    .enter()
+    .append('g')
+    .attr('class', 'legend')
+    .attr('transform', (d, i) => {
+        const result = `translate(${currentX}, ${svgHeight - legendRectSize + 50})`;
+        currentX += legendHorizontal + getTextWidth(d.name, "12px sans-serif") + legendRectSize + legendSpacing;
+        return result;
+    });
+
+    console.log(currentX);
+
+// Draw legend rectangles
+legend.append('rect')
+    .attr('width', legendRectSize)
+    .attr('height', legendRectSize)
+    .style('fill', d => d.color)
+    .style('stroke', d => d.color)
+    .attr('x', 0)
+    .attr('y', 0);
+
+// Draw legend text
+legend.append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .attr('y', legendRectSize / 2)
+    .text(d => d.name)
+    .attr("font-size", "12px")
+    .attr("font-weight", "600")
+    .attr("alignment-baseline","middle");
+
+
+
+
 
     // Animate the pie slices
     paths.transition()
@@ -445,10 +500,7 @@ function visualization3(data) {
     data.forEach(d => {
         crashCounts.set(d['Country/Region'], (crashCounts.get(d['Country/Region']) || 0) + 1);
     });
-
-    const colorScale = d3.scaleThreshold()
-        .domain([1, 5, 10, 15, 20, 25, 30])
-        .range(d3.schemeBlues[7]);
+        
 
     const tooltip = d3.select(".viz-3").append("div")
         .attr("class", "tooltip")
@@ -465,47 +517,43 @@ function visualization3(data) {
     const map = svg.append('g')
         .call(zoom); // Apply the zoom behavior here
 
+        const legend = svg.append("g")
+      .attr("id", "legend")
+      .attr("transform", "translate(50,180)"); // Adjust position as needed
 
-    // Legend
-    const legendHeight = 300, legendWidth = 20, legendMargin = 10;
-const legend = svg.append("g")
-    .attr("id", "legend")
-    .attr("transform", "translate(" + (width - 30 - legendMargin) + ",100)");
+    const legendItemHeight = 20;
+    const legendItemWidth = 20;
 
-// Legend Heading
-legend.append("text")
-    .attr("class", "legend-heading")
-    .attr("y", -10)
-    .attr("x", -legendHeight / 2)
-    .attr("transform", "rotate(-90)")
-    .style("text-anchor", "middle")
-    .text("Crashes");
+    // Add legend title
+    legend.append("text")
+      .attr("class", "legend-title")
+      .attr("y", -10)
+      .attr("x", -legendItemHeight / 2)
+      .style("text-anchor", "start")
+      .text("Crashes");
 
-// Note the domain here is reversed for the vertical legend to show larger values at the top
-const legendScale = d3.scaleLinear()
-    .domain([30, 0])
-    .range([0, legendHeight]);
+    // Add legend items
+    const legendItem = legend.selectAll(".legend-item")
+      .data(colorScale.range().map(function(color, index) {
+          if (index === 0) return null; // Skip the first entry
+          const d = colorScale.invertExtent(color);
+          if (index === 1) return [0, d[1]]; // Start from 0 for the first entry
+          return d;
+      }).filter(Boolean)) // Filter out null values
+      .enter().append("g")
+      .attr("class", "legend-item")
+      .attr("transform", (d, i) => `translate(0, ${i * legendItemHeight})`);
 
-    legend.selectAll("rect")
-    .data(colorScale.range().map(function(color) {
-        var d = colorScale.invertExtent(color);
-        if (d[0] == null) d[0] = legendScale.domain()[0];
-        if (d[1] == null) d[1] = legendScale.domain()[1];
-        return d;
-    }))
-    .enter().append("rect")
-    .attr("width", legendWidth)
-    .attr("y", function(d) { return legendScale(d[1]); }) // Use d[1] here for the y position
-    .attr("height", function(d) { return legendScale(d[0]) - legendScale(d[1]); }) // Height calculated from the scale
-    .attr("fill", function(d) { return colorScale(d[0]); });
+    legendItem.append("rect")
+      .attr("width", legendItemWidth)
+      .attr("height", legendItemHeight)
+      .attr("fill", d => colorScale(d[0]));
 
-legend.append("g")
-    .attr("transform", "translate(" + legendWidth + ",20)")
-    .call(d3.axisRight(legendScale)
-        .tickSize(5)
-        .tickValues(colorScale.domain()))
-    .select(".domain")
-    .remove();
+    legendItem.append("text")
+      .attr("x", legendItemWidth + 5)
+      .attr("y", legendItemHeight / 2)
+      .attr("dy", "0.35em")
+      .text(d => `${d[0]} - ${d[1]}`);
     d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(function (topo) {
 
         const countries = map.selectAll("path")
@@ -554,7 +602,9 @@ legend.append("g")
             .text(function(d) {
                 const crashes = crashCounts.get(d.properties.name) || 0;
                 return crashes > 0 ? crashes : '';
-            });
+            })
+            .attr("fill", "white");
+            
 
         function clicked(event, d) {
             const country = d3.select(this);
@@ -662,6 +712,16 @@ function updateVisualization4(data) {
     d3.treemap().size([680, 350]).padding(1)(root);
     //console.log("Hierarchy Leaves:", root.leaves());
 
+    const tooltip =  d3.select(".viz-4 .tooltip")
+    .attr("id", "treemap-tooltip")
+    .style("opacity", 0)
+    .style("position", "absolute")
+    .style("pointer-events", "none")
+    .style("background", "#b0c4de")
+    .style("padding", "5px")
+    .style("border-radius", "8px")
+    .style("text-align", "center");
+
     // Apply the treemap layout
     //treemapLayout(root);
 
@@ -678,7 +738,7 @@ function updateVisualization4(data) {
     // Enter new elements
     const nodesEnter = svg.enter().append("g")
     .attr("transform", d => `translate(${d.x0},${d.y0})`);
-console.log("Nodes entering:", nodesEnter.size());
+//console.log("Nodes entering:", nodesEnter.size());
 
     nodesEnter.append("rect")
         .attr("width", d => d.x1 - d.x0)
@@ -687,13 +747,31 @@ console.log("Nodes entering:", nodesEnter.size());
   .transition()
   .duration(1000)
   .attr("height", d => d.y1 - d.y0); // Animate to full height
+  
 
     nodesEnter.append("text")
         .attr("x", 5)
         .attr("y", 20)
         .text(d => d.data.name)
-        .attr("font-size", "12px")
+        .attr("font-size", "14px")
         .attr("fill", "white");
+
+
+        nodesEnter
+    .on("mouseover", function(event, d) {
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+        tooltip.html("Aircraft: " + d.data.name + "<br/>Crashes: " + d.data.value)
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px");
+    })
+    .on("mouseout", function(d) {
+        tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+    });
+    
 
     // Update existing elements
     svg.select("rect")
@@ -708,6 +786,7 @@ console.log("Nodes entering:", nodesEnter.size());
         .duration(500)
         .attr("x", 5)
         .attr("y", 20)
+        
         .text(d => d.data.name);
 
     // Remove old elements
@@ -772,6 +851,21 @@ function removeHighlight() {
     // Reset opacity for all bars
     barSvg.selectAll("g rect")
         .style("opacity", 1);
+}
+
+// Function to estimate text width (same as before)
+function getTextWidth(text, font) {
+    // re-use canvas object for better performance
+    const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    const context = canvas.getContext("2d");
+    context.font = font;
+    const metrics = context.measureText(text);
+    return metrics.width;
+}
+function getBrightness(d) {
+  // This is a simple brightness checker that can be replaced by more complex algorithms
+  const rgb = d3.rgb(colorScale(d));
+  return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
 }
 
 // Load data and call visualization functions
