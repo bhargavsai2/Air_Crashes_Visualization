@@ -211,8 +211,7 @@
 };
    // Define visualization functions
 function visualization1(data) {
-    // Code for visualization 1
-    // Add your D3 code here
+    
     const margin = { top: 20, right: 20, bottom: 30, left: 40 },
             barWidth = 1200 - margin.left - margin.right,
             barHeight = 350 - margin.top - margin.bottom;
@@ -248,7 +247,7 @@ function visualization1(data) {
         const ground = +d.Sum_of_Ground;
 
         aggregatedData[d.Year].Sum_of_Survived += Math.max(0,(aboard - fatalities));
-        aggregatedData[d.Year].Sum_of_Deaths += fatalities + ground;
+        aggregatedData[d.Year].Sum_of_Deaths += fatalities;/*fatalities + ground*/
 
         console.log(`Survived :${aggregatedData[d.Year].Sum_of_Survived} in year ${d.year}`);
         console.log(`Dead :${aggregatedData[d.Year].Sum_of_Deaths}`);
@@ -532,7 +531,7 @@ legend.append('text')
 
 
 function visualization3(data) {
-    const width = 930, height = 340;
+    const width = 930, height = 380;
 
     const svg = d3.select("#visualization3")
         .attr('class', 'geomap')
@@ -605,7 +604,14 @@ function visualization3(data) {
       .attr("x", legendItemWidth + 5)
       .attr("y", legendItemHeight / 2)
       .attr("dy", "0.35em")
-      .text(d => `${d[0]} - ${d[1]}`);
+      .text((d, i) => {
+    // Check if this is the last item in the legend
+    if (i === colorScale.range().length - 2) { // -2 because we start counting from 0 and skipped the first entry
+      return `${d[0]} - ${d[1]}+`; // Change this label to "30-35+" or ">=35"
+    } else {
+      return `${d[0]} - ${d[1]}`;
+    }
+  });
     d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(function (topo) {
 
         const countries = map.selectAll("path")
@@ -784,7 +790,7 @@ function updateVisualization4(data) {
     const svg = d3.select("#visualization4")
     .attr('class', 'treenode')
     .attr("width", 680)
-    .attr("height", 350)
+    .attr("height", 400)
     .selectAll("g").data(root.leaves());
 
     // Enter new elements
@@ -794,7 +800,7 @@ function updateVisualization4(data) {
 
     nodesEnter.append("rect")
         .attr("width", d => d.x1 - d.x0)
-        .attr("height", 0) // Start with height 0
+       // .attr("height", 0) // Start with height 0
   .attr("fill", d => colorScale4(d.data.value))
   .transition()
   .duration(1000)
