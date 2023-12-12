@@ -1,0 +1,146 @@
+html{
+    height: 100vh;
+}
+body {
+    background: #f9f9f9;
+color: #333;
+font-family: 'Open Sans', sans-serif;
+}
+.mainHead{
+
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+
+/*bar*/
+svg.bar{
+    width: 100%;
+    
+}
+.viz-1 .tooltip {
+        position: absolute;
+        text-align: center;
+        width: auto;
+        height: auto;
+        padding: 8px;
+        font: 12px sans-serif;
+        background: #b0c4de;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+        opacity: 0;
+    }
+.viz-1 .bar {
+        opacity: 1;
+
+    }
+    .viz-1 .grid line {
+        stroke: gainsboro;
+    }
+    .viz-1 .grid path {
+        stroke-width: 0;
+    }
+    .viz-1 .grid text {
+        display: none;
+    }
+
+/*pie css*/
+.pie {
+    position: relative;
+    top:5%;
+    /*filter: drop-shadow(0 1px 3px #333);*/
+}
+.pie .data-path:hover {
+    cursor: pointer;
+}
+.pie .data-text {
+    transition: transform .2s ease-in-out;
+    fill: #333;
+}
+.pie .data-text__value {
+    font-size: 2rem;
+    transform: translateY(-.5rem);
+    opacity: 0;
+}
+.pie .data-text__name {
+    font-size: 1rem;
+    transform: translateY(.5rem);
+    opacity: 0;
+}
+.pie .data-text--show {
+    transform: translateY(0);
+    animation: fadeGraphTextIn .5s forwards;
+}
+.pie .legend-text {
+    fill: #333;
+}
+@keyframes fadeGraphTextIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*geomap*/
+.viz-3 .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 120px;
+        
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+        opacity: 0;
+    }
+    .viz-3 #legend .legend-title {
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+    .viz-3 .legend rect {
+        fill: 333;
+        stroke: black;
+        opacity: 0.8;
+    }
+    .viz-3 text {
+        font-size: 8px;
+        font-weight: bold;
+        fill: #ffffff;
+        pointer-events: none;
+    }
+    .viz-3 #legend text{
+        fill:#333;
+        font-size: 10px;
+    }
+    .viz-3 .selected {
+        stroke: rgb(255, 255, 255);
+        stroke-width: 1px;
+    }
+    .viz-3 .legend-heading{
+        font-size: 15px;
+        fill: #333;
+    }
+
+
+    /*tree node*/
+    .treenode .node {
+        border: solid 1px white;
+        overflow: hidden;
+        position: absolute;
+        text-indent: 2px;
+        transition: transform 0.5s ease;
+    }
+    .treenode .node:hover {
+        transform: scale(1.05);
+        z-index: 1;
+    }
+    .treenode text {
+        pointer-events: none;
+    }
