@@ -606,8 +606,8 @@ function visualization3(data) {
       .attr("dy", "0.35em")
       .text((d, i) => {
     // Check if this is the last item in the legend
-    if (i === colorScale.range().length - 2) { // -2 because we start counting from 0 and skipped the first entry
-      return `${d[0]} - ${d[1]}+`; // Change this label to "30-35+" or ">=35"
+    if (i === colorScale.range().length - 2) { 
+      return `${d[0]} - ${d[1]}+`; 
     } else {
       return `${d[0]} - ${d[1]}`;
     }
@@ -698,64 +698,6 @@ function visualization4(data) {
 
     updateVisualization4(data); 
     
-   /* var groupedData = d3.rollup(data, v => v.length, d => d['Aircraft']);
-
-          // Sort and take the top 10
-            var sortedData = Array.from(groupedData).sort((a, b) => b[1] - a[1]).slice(0, 10);
-
-            // Convert to hierarchy format
-            var hierarchyData = {
-                name: "Crashes",
-                children: sortedData.map(d => ({name: d[0], value: d[1]}))
-            };
-
-            // Create a hierarchy
-            var root = d3.hierarchy(hierarchyData)
-                .sum(d => d.value)
-                .sort((a, b) => b.value - a.value);
-
-            // Create treemap layout
-            d3.treemap()
-                .size([680, 350])
-                .padding(1)(root);
-
-            // Define a gradient color scale
-            var color = d3.scaleSequential(d3.interpolateBlues)
-                .domain([0, d3.max(sortedData, d => d[1])]);
-
-            // Create SVG element
-            const svg = d3.select("#visualization4")
-                .attr('class', 'treenode')
-                .attr("width", 680)
-                .attr("height", 350);
-
-            // Add rectangles for each node
-            const nodes = svg.selectAll("g")
-                .data(root.leaves())
-                .enter()
-                .append("g")
-                .attr("transform", d => `translate(${d.x0},${d.y0})`);
-
-            nodes.append("rect")
-                .attr("width", d => d.x1 - d.x0)
-                .attr("height", d => d.y1 - d.y0)
-                .attr("fill", d => color(d.data.value))
-                .on("mouseover", function(event, d) {
-                    d3.select(this).style("opacity", 0.7);
-                })
-                .on("mouseout", function(event, d) {
-                    d3.select(this).style("opacity", 1);
-                });
-
-            // Add text labels
-            nodes.append("text")
-                .attr("x", 5)
-                .attr("y", 20)
-                .text(d => d.data.name)
-                .attr("font-size", "12px")
-                .attr("fill", "white")
-                .attr("word-break", "break-all");*/
-
 
 }
 
@@ -783,17 +725,17 @@ function updateVisualization4(data) {
     // Apply the treemap layout
     //treemapLayout(root);
 
-    // Set the color scale domain
+
     colorScale4.domain([0, d3.max(sortedData, d => d[1])]);
 
-    // Select the SVG element for visualization 4 if it exists
+  
     const svg = d3.select("#visualization4")
     .attr('class', 'treenode')
     .attr("width", 680)
     .attr("height", 400)
     .selectAll("g").data(root.leaves());
 
-    // Enter new elements
+   
     const nodesEnter = svg.enter().append("g")
     .attr("transform", d => `translate(${d.x0},${d.y0})`);
 //console.log("Nodes entering:", nodesEnter.size());
